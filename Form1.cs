@@ -144,6 +144,8 @@ namespace Laboratorio_No_6
             dataGridView3.DataSource = null;
             dataGridView3.DataSource = reportesAlquileres;
             dataGridView3.Refresh();
+            Alquileres alquilerMaximo = ListaAlquileres.OrderByDescending(a => a.KilometrosRecorridos).First();
+            labelMayorRecorrido.Text = alquilerMaximo.KilometrosRecorridos.ToString();
         }
     }
 }
